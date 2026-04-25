@@ -1,0 +1,14 @@
+[Unit]
+Description=Elder Care Terminal
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/elder-care-terminal
+ExecStart=/opt/elder-care-terminal/bin/elder-care-terminal
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>管理后台</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="admin-screen">
+  <main class="admin">
+    <header class="admin-header">
+      <div>
+        <h1>管理后台</h1>
+        <p id="adminStatus">设备状态加载中</p>
+      </div>
+      <a href="/" class="link-button">老人端</a>
+    </header>
+
+    <section class="admin-grid">
+      <article class="panel">
+        <h2>提醒列表</h2>
+        <div id="adminReminders" class="list compact"></div>
+      </article>
+      <article class="panel">
+        <h2>新增提醒</h2>
+        <form id="reminderForm" class="form">
+          <input name="title" placeholder="提醒名称" required>
+          <select name="type">
+            <option>MEDICINE</option>
+            <option>WATER</option>
+            <option>MEASURE</option>
+            <option>MEAL</option>
+            <option>EXERCISE</option>
+            <option>CUSTOM</option>
+          </select>
+          <input name="time" type="time" required>
+          <button type="submit">新增提醒</button>
+        </form>
+      </article>
+      <article class="panel">
+        <h2>家人联系方式</h2>
+        <div id="contacts" class="list compact"></div>
+        <form id="contactForm" class="form">
+          <input name="name" placeholder="姓名" required>
+          <input name="phone" placeholder="电话或账号">
+          <input name="relation" placeholder="关系">
+          <label class="check"><input name="primary" type="checkbox"> 设为主要联系人</label>
+          <button type="submit">新增联系人</button>
+        </form>
+      </article>
+      <article class="panel">
+        <h2>发送留言</h2>
+        <form id="messageForm" class="form">
+          <input name="sender_name" placeholder="发送人" value="家人">
+          <textarea name="content" placeholder="留言内容" required></textarea>
+          <button type="submit">发送留言</button>
+        </form>
+      </article>
+      <article class="panel wide">
+        <h2>最近日志</h2>
+        <pre id="logs" class="logs"></pre>
+      </article>
+    </section>
+  </main>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

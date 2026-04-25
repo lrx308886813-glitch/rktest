@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>老人陪伴提醒终端</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="elder-screen">
+  <main class="home">
+    <section class="status-band">
+      <div>
+        <div id="clock" class="clock">--:--</div>
+        <div id="date" class="date">----</div>
+      </div>
+      <div class="device-pill" id="deviceStatus">设备连接中</div>
+    </section>
+
+    <section class="summary-grid">
+      <article class="panel next">
+        <div class="label">下一条提醒</div>
+        <div id="nextReminder" class="large-text">加载中</div>
+      </article>
+      <article class="panel unread">
+        <div class="label">未读留言</div>
+        <div id="unreadCount" class="large-text">0 条</div>
+      </article>
+    </section>
+
+    <section class="action-grid">
+      <button id="ackBtn" class="primary">我知道了</button>
+      <button id="playMsgBtn">播放留言</button>
+      <button id="callBtn">呼叫家人</button>
+      <button id="showRemindersBtn">查看提醒</button>
+    </section>
+
+    <section class="panel list-panel" id="reminderPanel" hidden>
+      <div class="label">提醒列表</div>
+      <div id="reminderList" class="list"></div>
+    </section>
+  </main>
+  <script src="/js/main.js"></script>
+</body>
+</html>
