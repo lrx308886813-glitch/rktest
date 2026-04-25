@@ -1,0 +1,6 @@
+[2026-04-25 02:17:24] STATE INIT -> BOOT
+[2026-04-25 02:17:24] STATE BOOT -> IDLE reason=boot_complete
+[2026-04-25 02:17:24] HTTP server started on port 8080
+[2026-04-25 02:17:25] STATE INIT -> BOOT
+[2026-04-25 02:17:25] STATE BOOT -> FACTORY_TEST reason=factory_test_start
+[2026-04-25 02:17:25] STATE FACTORY_TEST -> IDLE reason=factory_test_done
